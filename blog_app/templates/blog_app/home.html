@@ -1,0 +1,19 @@
+{% extends 'blog_app/base.html' %}
+
+{% block content %}
+
+    {%for p in var_posts%}
+        <article class="media content-section">
+            <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ p.author }}</a>
+                <small class="text-muted">{{ p.date }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ p.title }}</a></h2>
+            <p class="article-content">{{ p.content }}</p>
+            </div>
+        </article>
+    {%endfor%}
+
+{% endblock %}
+
