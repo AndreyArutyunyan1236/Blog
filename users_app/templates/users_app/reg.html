@@ -1,0 +1,22 @@
+{% extends 'blog_app/base.html' %}
+
+{% block content %}
+    <div class="content_section">
+        <form  method="POST">
+            {% csrf_token %}
+            <fieldset class="form_group">
+                <legend class="borger-bottom mb-4">
+                    Join Today
+                </legend>
+                {{ form }}
+            </fieldset>
+
+            <div class="form_group">
+                <button class="btn btn-outline-info" type="submit">Sign In</button>
+            </div>
+
+        </form>
+    </div>
+{% endblock %}
+
+
